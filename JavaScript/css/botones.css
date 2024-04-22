@@ -1,0 +1,20 @@
+div.content {
+    border: 3px solid black;
+    opacity: 0.25;
+    transition: border-color 0.3s, opacity 0.3s; /* Agregar transición para un cambio suave */
+}
+
+div.content.highlight {
+    border-color: #443092; /* Cambiar solo el color del borde cuando se destaca */
+    opacity: 1;
+    background-color: beige;
+}
+
+.form-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.highlight {
+    display: block;
+}

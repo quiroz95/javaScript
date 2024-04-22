@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando HTML con JavaScript</title>
+</head>
+<body>
+    <div class="content" id="content_first">
+        <p>Contenido dinamico aqui</p>
+    </div><!--#content_first-->
+    <div class="content" id="content_second">
+        <p>Second section</p>
+    </div><!--#content_first-->
+    <script>
+        let body = document.getElementsByTagName("body")[0];
+        //console.log(body.innerHTML);
+        //body.innerHTML="<p>Contenido Borrado de body</p>";
+        let elementos=document.getElementsByTagName("*");
+        console.log(elementos)
+        for(elemento of elementos){
+            if(elemento.id=="content_second")
+                elemento.innerHTML="<p>Segunda sección</p>";
+                elemento.removeAttribute("hidden");
+        }
+    </script>
+</body>
+</html>
